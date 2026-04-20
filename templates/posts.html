@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+Все записи
+{% endblock %}
+
+{% block body %} 
+<h1 class="content">Все записи</h1>
+
+
+
+<div class="col-md-6"> 
+    {% for post in posts %}
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+         <div class="col p-4 d-flex flex-column position-static">
+                <ya-tr-span data-index="6-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Featured post" data-translation="Рекомендуемый пост" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{post.title}}</ya-tr-span></h3> 
+                
+                    <p class="card-text mb-auto">
+                        <ya-tr-span data-index="8-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="This is a wider card with supporting text below as a natural lead-in to additional content."  data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{post.text}}</ya-tr-span>
+                    </p> 
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                        <ya-tr-span data-index="8-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value=" " data-translation=" " data-ch="0" data-type="trSpan" style="visibility: inherit !important;"> </ya-tr-span>
+                        <ya-tr-span data-index="8-1" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Continue reading " data-translation="Продолжить чтение " data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Читать далее </ya-tr-span>
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg> 
+                    </a> 
+         </div> 
+                
+    </div> 
+    {% endfor %}
+</div>
+
+
+{% endblock %}

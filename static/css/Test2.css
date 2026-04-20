@@ -3,14 +3,23 @@
             padding: 0;
             box-sizing: border-box;
         }
+        header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(80, 138, 114, 0.459);
+}
 
         body {
             background: linear-gradient(135deg, #f5f7e8 0%, #e8f0d5 100%);
             font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
             min-height: 100vh;
-            padding: 40px 24px;
         }
-
+.row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative{
+    max-width: 300px;
+    height: 300px;
+    width: 300px;
+}
         .container {
             max-width: 1280px;
             margin: 0 auto;

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Портфолио Ксении Прищепенковой — создаю сайты, которые крадут ваши сердца (и иногда данные)">
-    <title>Ксения Прищепенкова </title>
-    <link rel="stylesheet" href="./Test2.css">
+{% extends 'base.html' %}
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Test2.css') }}">
     
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+
+{% endblock %}
+
+{% block body %} 
     <div class="container">
         <div class="header-wrapper">
             <h1>Ксения Прищепенкова</h1>
@@ -16,7 +15,7 @@
 
         <div class="profile-card">
             <div class="profile-img">
-                <img src="./Source/i.webp" alt="Ксения Прищепенкова">
+                <img src="{{ url_for('static', filename='img/iam.jpg') }}" alt="Ксения Прищепенкова">
             </div>
             <div class="intro">
                 <h2>✨ Плейбой, филантроп, не богатая дама ✨</h2>
@@ -53,20 +52,16 @@
 
         <div class="gallery">
             <div class="gallery-item">
-                <img src="./Source/prag.jpg" alt="Ксения прыгает">
+                <img src="{{ url_for('static', filename='img/prag.jpg') }}" alt="Я прыгаю">
             </div>
             <div class="gallery-item">
-                <img src="./Source/sleep.webp" alt="Ксения спит">
+                <img src="{{ url_for('static', filename='img/sleeping.jpg') }}" alt="Я сплю">
             </div>
             <div class="gallery-item">
-                <img src="./Source/eat.jpg" alt="Ксения кушает">
+                <img src="{{ url_for('static', filename='img/eat.jpg') }}" alt="Я кушаю">
             </div>
         </div>
 
-        <footer>
-            <p>© 2026 Ксения Прищепенкова — сделано с ❤️ и юмором</p>
-            
-        </footer>
+        
     </div>
-</body>
-</html>
+{% endblock %}
