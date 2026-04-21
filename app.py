@@ -43,5 +43,5 @@ def AboutUs():
     return render_template('AboutUs.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
